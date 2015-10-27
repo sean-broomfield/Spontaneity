@@ -4,13 +4,43 @@
           android:versionCode="1"
           android:versionName="1.0">
     <uses-sdk android:minSdkVersion="19"/>
-    <application android:label="@string/app_name" android:icon="@drawable/ic_launcher">
-        <activity android:name=".Login_Activity"
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <application
+                 android:name=".Application"
+                 android:label="@string/app_name"
+                 android:allowBackup="true"
+                 android:icon="@drawable/ic_launcher">
+
+        <activity android:name=".DispatchActivity"
                   android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <activity android:name=".Login_Activity"
+                  android:label="@string/app_name"
+                  android:screenOrientation="portrait"/>
+
+        <activity android:name=".SignUpActivity"
+                  android:screenOrientation="portrait"
+                  android:label="@string/app_name"/>
+
+        <activity android:name=".WelcomeActivity"
+                  android:label="@string/app_name"
+                  android:screenOrientation="portrait"/>
+
+        <activity android:name=".MainActivity"
+                  android:label="@string/app_name"
+                  android:screenOrientation="portrait"/>
+
+        <activity android:name=".SettingsActivity"
+                  android:label="@string/app_name"
+                  android:screenOrientation="portrait"/>
+
     </application>
 </manifest>
